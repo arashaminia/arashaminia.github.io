@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>3D Printer Design | Arash Amini</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f14;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* HERO */
+
+        header {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+            background:
+                linear-gradient(rgba(11,15,20,0.55), rgba(11,15,20,0.9)),
+                url("images/3d-printer/02-3d-printer-render.png")
+                center / cover no-repeat;
+        }
+
+        .hero {
+            max-width: 900px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 50px;
+            color: #9aa6b2;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back:hover {
+            color: white;
+        }
+
+        .hero-number {
+            color: #718092;
+            font-size: 15px;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 90px);
+            line-height: 1;
+            letter-spacing: -4px;
+            margin-bottom: 25px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #b9c3cd;
+            margin-bottom: 25px;
+        }
+
+        .intro {
+            max-width: 700px;
+            color: #9ba7b3;
+            font-size: 18px;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            font-size: 42px;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .section-text {
+            max-width: 850px;
+            color: #9ba7b3;
+            font-size: 18px;
+        }
+
+        /* PROJECT INFO */
+
+        .info-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .info-box {
+            background: #151c24;
+            border: 1px solid #26313c;
+            padding: 28px;
+        }
+
+        .info-box span {
+            display: block;
+            color: #718092;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .info-box strong {
+            font-size: 19px;
+            font-weight: normal;
+        }
+
+        /* IMAGES */
+
+        .gallery {
+            display: grid;
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .gallery img {
+            width: 100%;
+            display: block;
+            border: 1px solid #26313c;
+        }
+
+        .caption {
+            color: #75818d;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            background: #11171e;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .skill {
+            padding: 12px 20px;
+            border: 1px solid #34404c;
+            color: #c8d0d8;
+        }
+
+        /* ENGINEERING */
+
+        .engineering-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .engineering-card {
+            background: #151c24;
+            border: 1px solid #26313c;
+            padding: 35px;
+        }
+
+        .engineering-card h3 {
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .engineering-card p {
+            color: #929eaa;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 50px 20px;
+            text-align: center;
+            color: #68737e;
+            border-top: 1px solid #202a34;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 70px 6%;
+            }
+
+            header {
+                padding: 60px 6%;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="hero">
+
+        <a href="index.html" class="back">
+            ← Back to Portfolio
+        </a>
+
+        <div class="hero-number">
+            PROJECT 02
+        </div>
+
+        <h1>3D Printer</h1>
+
+        <div class="subtitle">
+            Mechanical Design & CAD Development
+        </div>
+
+        <p class="intro">
+            Mechanical design and development of a desktop 3D printer,
+            including structural architecture, motion systems, component
+            integration and detailed CAD assembly.
+        </p>
+
+    </div>
+
+</header>
+
+
+<section>
+
+    <h2 class="section-title">Project Overview</h2>
+
+    <p class="section-text">
+        This project involved the mechanical development of a 3D printer
+        platform with a focus on structural rigidity, motion accuracy,
+        component integration and practical mechanical construction.
+        The complete machine architecture was developed as a 3D CAD
+        assembly, bringing together the frame, linear motion components,
+        drive mechanisms, print platform and supporting hardware.
+    </p>
+
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <span>Role</span>
+            <strong>Mechanical Design Engineer</strong>
+        </div>
+
+        <div class="info-box">
+            <span>Primary CAD</span>
+            <strong>SolidWorks</strong>
+        </div>
+
+        <div class="info-box">
+            <span>Design Focus</span>
+            <strong>Mechanical System Development</strong>
+        </div>
+
+        <div class="info-box">
+            <span>Analysis</span>
+            <strong>FEA & Multiphysics</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2 class="section-title">CAD Development</h2>
+
+    <p class="section-text">
+        The machine was developed as a detailed mechanical assembly.
+        The CAD workflow included structural framing, linear guides,
+        drive components, mounting brackets and the integration of
+        multiple mechanical subsystems into a complete machine.
+    </p>
+
+    <div class="gallery">
+
+        <div>
+            <img
+                src="images/3d-printer/01-3d-printer-cad.png"
+                alt="3D printer SolidWorks CAD assembly"
+            >
+
+            <p class="caption">
+                SolidWorks assembly showing the mechanical architecture
+                and integrated motion system.
+            </p>
+        </div>
+
+        <div>
+            <img
+                src="images/3d-printer/02-3d-printer-render.png"
+                alt="3D printer mechanical design render"
+            >
+
+            <p class="caption">
+                Final visualisation of the 3D printer mechanical design.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="engineering">
+
+    <h2 class="section-title">Engineering Approach</h2>
+
+    <div class="engineering-grid">
+
+        <div class="engineering-card">
+
+            <h3>Mechanical Architecture</h3>
+
+            <p>
+                Development of the overall machine structure and
+                integration of the major mechanical subsystems
+                within a constrained working envelope.
+            </p>
+
+        </div>
+
+
+        <div class="engineering-card">
+
+            <h3>Motion System</h3>
+
+            <p>
+                CAD development and integration of linear motion,
+                shafts, guides, drive components and moving assemblies
+                required for controlled tool-head movement.
+            </p>
+
+        </div>
+
+
+        <div class="engineering-card">
+
+            <h3>Structural Design</h3>
+
+            <p>
+                Focus on frame rigidity, component mounting and
+                mechanical stability to support accurate motion
+                during machine operation.
+            </p>
+
+        </div>
+
+
+        <div class="engineering-card">
+
+            <h3>Engineering Simulation</h3>
+
+            <p>
+                Engineering analysis can be integrated into the
+                development workflow using finite element analysis
+                and multiphysics simulation to evaluate structural
+                and physical behaviour.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="skills">
+
+    <h2 class="section-title">Tools & Expertise</h2>
+
+    <div class="skill-list">
+
+        <div class="skill">SolidWorks</div>
+        <div class="skill">3D CAD</div>
+        <div class="skill">Mechanical Design</div>
+        <div class="skill">Machine Design</div>
+        <div class="skill">Mechanical Assemblies</div>
+        <div class="skill">Product Development</div>
+        <div class="skill">Finite Element Analysis</div>
+        <div class="skill">Abaqus</div>
+        <div class="skill">COMSOL Multiphysics</div>
+        <div class="skill">CFD</div>
+        <div class="skill">Multiphysics Simulation</div>
+        <div class="skill">Engineering Analysis</div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2 class="section-title">Engineering Capability</h2>
+
+    <p class="section-text">
+
+        My work combines mechanical design with engineering simulation.
+        In addition to CAD modelling and product development, I work with
+        finite element analysis, computational fluid dynamics and
+        multiphysics simulation.
+
+        <br><br>
+
+        My simulation experience includes
+        <strong>Abaqus</strong> for finite element analysis and
+        <strong>COMSOL Multiphysics</strong> for coupled multiphysics
+        problems.
+
+        <br><br>
+
+        This allows me to approach mechanical systems not only from a
+        geometric perspective, but also from structural, thermal,
+        fluid-dynamic and multiphysics perspectives.
+
+    </p>
+
+</section>
+
+
+<footer>
+
+    © 2026 Arash Amini — Mechanical Design Engineer
+
+</footer>
+
+</body>
+</html>
