@@ -13,196 +13,502 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #0b0f14;
-            color: #ffffff;
+            background: #080c11;
+            color: #f5f7fa;
             line-height: 1.6;
         }
 
+        a {
+            color: inherit;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(8, 12, 17, 0.82);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .logo {
+            font-size: 17px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #aeb8c3;
+            margin-left: 30px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* HERO */
+
         header {
-            min-height: 90vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #0b0f14, #18212b);
+            padding: 120px 7% 80px;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 75% 30%, rgba(90,120,150,0.13), transparent 35%),
+                linear-gradient(135deg, #080c11, #111923);
         }
 
         .hero {
-            max-width: 900px;
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .eyebrow {
+            color: #8296aa;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-bottom: 22px;
         }
 
         .hero h1 {
-            font-size: clamp(45px, 8vw, 90px);
-            letter-spacing: -3px;
-            margin-bottom: 15px;
+            font-size: clamp(55px, 10vw, 120px);
+            line-height: 0.95;
+            letter-spacing: -6px;
+            margin-bottom: 30px;
         }
 
         .hero h2 {
-            font-size: 24px;
+            font-size: clamp(22px, 3vw, 34px);
             font-weight: normal;
-            color: #b7c0c9;
-            margin-bottom: 25px;
+            color: #c1ccd6;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            max-width: 650px;
-            margin: auto;
-            color: #8995a1;
+            max-width: 680px;
+            color: #8794a1;
             font-size: 18px;
+        }
+
+        .hero-buttons {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .button {
             display: inline-block;
-            margin-top: 35px;
-            padding: 14px 28px;
-            border: 1px solid #ffffff;
-            color: white;
+            padding: 15px 28px;
+            border: 1px solid #dbe2e8;
             text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
             transition: 0.3s;
         }
 
         .button:hover {
             background: white;
-            color: #0b0f14;
+            color: #080c11;
         }
 
+        .button.secondary {
+            border-color: #394653;
+            color: #aeb8c3;
+        }
+
+        .button.secondary:hover {
+            background: #18222d;
+            color: white;
+        }
+
+        /* GENERAL */
+
         section {
-            padding: 90px 7%;
+            padding: 120px 7%;
+        }
+
+        .section-label {
+            color: #718394;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 15px;
         }
 
         .section-title {
-            font-size: 40px;
-            margin-bottom: 50px;
+            font-size: clamp(38px, 5vw, 62px);
+            letter-spacing: -2px;
+            margin-bottom: 55px;
         }
 
-        .projects {
+        /* FEATURED PROJECT */
+
+        .featured {
+            background: #0c1219;
+        }
+
+        .featured-project {
+            max-width: 1200px;
+            margin: auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: 1.2fr 0.8fr;
+            background: #111922;
+            border: 1px solid #26313c;
+            overflow: hidden;
         }
 
-        .project {
-            min-height: 320px;
-            background: #151c24;
-            border: 1px solid #26313c;
-            padding: 30px;
+        .featured-image {
+            min-height: 520px;
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.7s ease;
+        }
+
+        .featured-project:hover .featured-image img {
+            transform: scale(1.04);
+        }
+
+        .featured-info {
+            padding: 55px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            transition: 0.3s;
-        }
-
-        .project:hover {
-            transform: translateY(-8px);
-            border-color: #ffffff;
+            justify-content: center;
         }
 
         .project-number {
-            color: #77838f;
-            font-size: 14px;
-            margin-bottom: auto;
+            color: #6f8294;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
         }
 
-        .project h3 {
-            font-size: 28px;
-            margin-bottom: 10px;
+        .featured-info h3 {
+            font-size: 36px;
+            line-height: 1.1;
+            margin-bottom: 22px;
         }
 
-        .project p {
-            color: #8995a1;
+        .featured-info p {
+            color: #929eaa;
+            margin-bottom: 25px;
         }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 35px;
+        }
+
+        .tag {
+            border: 1px solid #33404c;
+            padding: 7px 11px;
+            color: #aab5bf;
+            font-size: 12px;
+        }
+
+        .project-link {
+            display: inline-block;
+            width: fit-content;
+            text-decoration: none;
+            color: white;
+            border-bottom: 1px solid #738494;
+            padding-bottom: 7px;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            border-color: white;
+            padding-left: 7px;
+        }
+
+        /* PROJECT GALLERY */
+
+        .gallery {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            background: #111922;
+            border: 1px solid #222e39;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.025);
+        }
+
+        .gallery-caption {
+            padding: 18px 20px;
+            color: #8997a5;
+            font-size: 13px;
+        }
+
+        /* SKILLS */
 
         .skills {
-            background: #11171e;
+            background: #0b1016;
         }
 
         .skill-list {
+            max-width: 1100px;
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
         }
 
         .skill {
-            padding: 12px 20px;
-            border: 1px solid #34404c;
-            color: #c8d0d8;
+            padding: 13px 19px;
+            border: 1px solid #303c48;
+            color: #c2ccd5;
+            background: #101720;
+            transition: 0.3s;
         }
+
+        .skill:hover {
+            border-color: #aab6c1;
+            transform: translateY(-3px);
+        }
+
+        /* ABOUT */
 
         .about {
-            max-width: 800px;
-            color: #aab4be;
-            font-size: 19px;
+            max-width: 850px;
         }
 
-        footer {
-            padding: 50px 20px;
+        .about p {
+            color: #a5b0bb;
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        /* CONTACT */
+
+        .contact {
             text-align: center;
-            color: #68737e;
+            background:
+                linear-gradient(135deg, #111923, #080c11);
+        }
+
+        .contact h2 {
+            font-size: clamp(40px, 6vw, 70px);
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            color: #8c99a6;
+            margin-bottom: 35px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 20px;
+            text-align: center;
+            color: #566371;
             border-top: 1px solid #202a34;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav .links {
+                display: none;
+            }
+
+            header {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            .hero h1 {
+                letter-spacing: -3px;
+            }
+
+            .featured-project {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-image {
+                min-height: 300px;
+            }
+
+            .featured-info {
+                padding: 35px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 80px 6%;
+            }
         }
     </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        ARASH AMINI
+    </div>
+
+    <div class="links">
+        <a href="#work">WORK</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
 <header>
+
     <div class="hero">
 
-        <h1>ARASH AMINI</h1>
+        <div class="eyebrow">
+            Mechanical Design Engineer
+        </div>
 
-        <h2>Mechanical Design Engineer</h2>
+        <h1>
+            ARASH<br>AMINI
+        </h1>
+
+        <h2>
+            Mechanical Design • CAD • Product Development
+        </h2>
 
         <p>
-            CAD Design • Product Development • Mechanical Engineering
+            Engineering concepts developed through 3D CAD,
+            mechanical design, product development and
+            design thinking.
         </p>
 
-        <a href="#projects" class="button">
-            VIEW MY WORK
-        </a>
+        <div class="hero-buttons">
+
+            <a href="#work" class="button">
+                EXPLORE MY WORK
+            </a>
+
+            <a href="#contact" class="button secondary">
+                GET IN TOUCH
+            </a>
+
+        </div>
 
     </div>
+
 </header>
 
 
-<section id="projects">
+<!-- FEATURED PROJECT -->
 
-    <h2 class="section-title">Selected Projects</h2>
+<section id="work" class="featured">
 
-    <div class="projects">
+    <div class="section-label">
+        01 — Featured Project
+    </div>
 
-        <div class="project">
-            <div class="project-number">01</div>
-            <h3>Robotic Arm</h3>
-            <p>
-                Mechanical design, CAD modelling and assembly development.
-            </p>
+    <h2 class="section-title">
+        Selected Work
+    </h2>
+
+    <div class="featured-project">
+
+        <div class="featured-image">
+
+            <img
+                src="images/03-hero-render.png"
+                alt="Compact enclosed mobility vehicle concept"
+            >
+
         </div>
 
-        <div class="project">
-            <div class="project-number">02</div>
-            <h3>Sheet Metal Enclosure</h3>
-            <p>
-                3D modelling, sheet-metal design and manufacturing preparation.
-            </p>
-        </div>
+        <div class="featured-info">
 
-        <div class="project">
-            <div class="project-number">03</div>
-            <h3>Mechanical Assembly</h3>
-            <p>
-                Component design, assembly modelling and engineering drawings.
-            </p>
-        </div>
+            <div class="project-number">
+                PROJECT 01
+            </div>
 
-        <div class="project">
-            <div class="project-number">04</div>
-            <h3>Product Design</h3>
+            <h3>
+                Compact Enclosed<br>
+                Mobility Vehicle
+            </h3>
+
             <p>
-                Concept development and mechanical product design.
+                A compact mobility vehicle concept exploring
+                exterior form, mechanical packaging, user access,
+                occupant ergonomics and product development.
             </p>
+
+            <div class="tags">
+
+                <span class="tag">CAD DESIGN</span>
+                <span class="tag">PRODUCT DEVELOPMENT</span>
+                <span class="tag">MECHANICAL DESIGN</span>
+                <span class="tag">ERGONOMICS</span>
+
+            </div>
+
+            <a
+                href="project-mobility.html"
+                class="project-link"
+            >
+                VIEW FULL PROJECT →
+            </a>
+
         </div>
 
     </div>
@@ -210,55 +516,188 @@
 </section>
 
 
-<section class="skills">
-
-    <h2 class="section-title">Engineering Skills</h2>
-
-    <div class="skill-list">
-
-        <div class="skill">SolidWorks</div>
-        <div class="skill">AutoCAD</div>
-        <div class="skill">3D CAD</div>
-        <div class="skill">Mechanical Design</div>
-        <div class="skill">Product Development</div>
-        <div class="skill">Engineering Drawings</div>
-        <div class="skill">Sheet Metal Design</div>
-        <div class="skill">Assemblies</div>
-
-    </div>
-
-</section>
-
+<!-- PROJECT VISUALS -->
 
 <section>
 
-    <h2 class="section-title">About Me</h2>
+    <div class="section-label">
+        Project Visuals
+    </div>
+
+    <h2 class="section-title">
+        Design Development
+    </h2>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+
+            <img
+                src="images/01-overview.png"
+                alt="Mobility vehicle CAD overview"
+            >
+
+            <div class="gallery-caption">
+                Exterior form and overall vehicle architecture
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/02-mechanism-detail.png"
+                alt="Mobility vehicle mechanical detail"
+            >
+
+            <div class="gallery-caption">
+                Mechanical packaging and lower-body detail
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/04-energy-concept.png"
+                alt="Mobility vehicle energy concept"
+            >
+
+            <div class="gallery-caption">
+                Energy and infrastructure concept development
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/05-user-access.png"
+                alt="Mobility vehicle user access study"
+            >
+
+            <div class="gallery-caption">
+                User access and interaction study
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/06-ergonomics.png"
+                alt="Mobility vehicle ergonomics study"
+            >
+
+            <div class="gallery-caption">
+                Occupant ergonomics and usability development
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills" class="skills">
+
+    <div class="section-label">
+        Engineering Capabilities
+    </div>
+
+    <h2 class="section-title">
+        Skills & Expertise
+    </h2>
+
+    <div class="skill-list">
+
+        <div class="skill">3D CAD</div>
+        <div class="skill">Mechanical Design</div>
+        <div class="skill">Product Development</div>
+        <div class="skill">CAD Modelling</div>
+        <div class="skill">Mechanical Assemblies</div>
+        <div class="skill">Engineering Drawings</div>
+        <div class="skill">Design Development</div>
+        <div class="skill">Concept Development</div>
+        <div class="skill">Ergonomics</div>
+        <div class="skill">Mechanical Packaging</div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-label">
+        About
+    </div>
+
+    <h2 class="section-title">
+        Engineering with<br>
+        purpose.
+    </h2>
 
     <div class="about">
 
         <p>
-            I am a mechanical design engineer focused on CAD modelling,
-            mechanical design and product development.
+            I am a mechanical design engineer focused on
+            transforming engineering concepts into detailed
+            and visually clear mechanical designs.
         </p>
 
-        <br>
-
         <p>
-            I enjoy turning engineering concepts into practical,
-            manufacturable designs through detailed 3D modelling,
-            assemblies and technical drawings.
+            My work combines CAD modelling, mechanical design,
+            product development and engineering thinking to
+            explore how products can function, interact with
+            people and ultimately become practical solutions.
         </p>
 
     </div>
 
 </section>
 
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <h2>
+        Have a project?
+    </h2>
+
+    <p>
+        I'm open to mechanical design, CAD and product
+        development opportunities.
+    </p>
+
+    <a
+        href="mailto:your-email@example.com"
+        class="button"
+    >
+        CONTACT ME
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
     © 2026 Arash Amini — Mechanical Design Engineer
 
 </footer>
+
 
 </body>
 </html>
