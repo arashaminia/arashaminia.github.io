@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Arash Amini | Mechanical Design Engineer</title>
+    <title>Arash Amini | Mechanical Design & Simulation Engineer</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -19,41 +20,38 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #080c11;
-            color: #f5f7fa;
+            background: #0b0f14;
+            color: #ffffff;
             line-height: 1.6;
         }
 
-        a {
-            color: inherit;
-        }
-
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: fixed;
             top: 0;
-            left: 0;
             width: 100%;
-            padding: 22px 6%;
+            z-index: 1000;
+            padding: 20px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 100;
-            background: rgba(8, 12, 17, 0.82);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
+            background: rgba(11, 15, 20, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #202a34;
         }
 
         .logo {
-            font-size: 17px;
+            font-size: 20px;
             font-weight: bold;
             letter-spacing: 2px;
         }
 
         nav a {
+            color: #aab4be;
             text-decoration: none;
-            color: #aeb8c3;
             margin-left: 30px;
             font-size: 14px;
             transition: 0.3s;
@@ -63,420 +61,459 @@
             color: white;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         header {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 120px 7% 80px;
-            position: relative;
-            overflow: hidden;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 60px;
+
             background:
-                radial-gradient(circle at 75% 30%, rgba(90,120,150,0.13), transparent 35%),
-                linear-gradient(135deg, #080c11, #111923);
+                radial-gradient(circle at 50% 30%, #1b2734 0%, #0b0f14 55%);
         }
 
         .hero {
-            max-width: 1100px;
-            width: 100%;
-            margin: auto;
+            max-width: 1000px;
         }
 
-        .eyebrow {
-            color: #8296aa;
+        .hero-label {
+            color: #71869a;
+            font-size: 14px;
             letter-spacing: 4px;
             text-transform: uppercase;
-            font-size: 13px;
-            margin-bottom: 22px;
+            margin-bottom: 25px;
         }
 
         .hero h1 {
-            font-size: clamp(55px, 10vw, 120px);
-            line-height: 0.95;
-            letter-spacing: -6px;
-            margin-bottom: 30px;
+            font-size: clamp(50px, 9vw, 110px);
+            letter-spacing: -5px;
+            line-height: 1;
+            margin-bottom: 25px;
         }
 
         .hero h2 {
-            font-size: clamp(22px, 3vw, 34px);
+            font-size: clamp(22px, 3vw, 32px);
             font-weight: normal;
-            color: #c1ccd6;
-            margin-bottom: 20px;
+            color: #c4ced8;
+            margin-bottom: 25px;
         }
 
         .hero p {
-            max-width: 680px;
-            color: #8794a1;
+            max-width: 750px;
+            margin: auto;
+            color: #8995a1;
             font-size: 18px;
         }
 
         .hero-buttons {
             margin-top: 40px;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
         }
 
         .button {
             display: inline-block;
-            padding: 15px 28px;
-            border: 1px solid #dbe2e8;
+            padding: 15px 32px;
+            margin: 8px;
+            border: 1px solid #ffffff;
+            color: white;
             text-decoration: none;
-            font-size: 14px;
-            letter-spacing: 1px;
             transition: 0.3s;
+            letter-spacing: 1px;
         }
 
         .button:hover {
             background: white;
-            color: #080c11;
+            color: #0b0f14;
         }
 
         .button.secondary {
-            border-color: #394653;
-            color: #aeb8c3;
+            border-color: #34404c;
+            color: #aab4be;
         }
 
         .button.secondary:hover {
-            background: #18222d;
+            background: #151c24;
             color: white;
         }
 
-        /* GENERAL */
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
-            padding: 120px 7%;
+            padding: 110px 7%;
         }
 
         .section-label {
-            color: #718394;
+            color: #71869a;
             text-transform: uppercase;
             letter-spacing: 3px;
-            font-size: 12px;
-            margin-bottom: 15px;
+            font-size: 13px;
+            margin-bottom: 12px;
         }
 
         .section-title {
-            font-size: clamp(38px, 5vw, 62px);
+            font-size: clamp(36px, 5vw, 55px);
+            margin-bottom: 50px;
             letter-spacing: -2px;
-            margin-bottom: 55px;
         }
 
-        /* FEATURED PROJECT */
 
-        .featured {
-            background: #0c1219;
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            background: #11171e;
         }
 
-        .featured-project {
-            max-width: 1200px;
-            margin: auto;
+        .intro-text {
+            max-width: 900px;
+            color: #aab4be;
+            font-size: 21px;
+        }
+
+        .intro-text strong {
+            color: white;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            background: #111922;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            min-height: 330px;
+            background: #151c24;
             border: 1px solid #26313c;
-            overflow: hidden;
-        }
-
-        .featured-image {
-            min-height: 520px;
-            overflow: hidden;
-        }
-
-        .featured-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.7s ease;
-        }
-
-        .featured-project:hover .featured-image img {
-            transform: scale(1.04);
-        }
-
-        .featured-info {
-            padding: 55px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
+            transition: 0.35s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+            border-color: #ffffff;
         }
 
         .project-number {
-            color: #6f8294;
+            color: #657381;
             font-size: 13px;
             letter-spacing: 2px;
-            margin-bottom: 20px;
+            margin-bottom: auto;
         }
 
-        .featured-info h3 {
-            font-size: 36px;
-            line-height: 1.1;
-            margin-bottom: 22px;
+        .project h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
         }
 
-        .featured-info p {
-            color: #929eaa;
-            margin-bottom: 25px;
+        .project p {
+            color: #8995a1;
         }
 
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 35px;
+
+        /* =========================
+           FEATURED PROJECT
+        ========================= */
+
+        .featured {
+            background: #0f151c;
         }
 
-        .tag {
-            border: 1px solid #33404c;
-            padding: 7px 11px;
-            color: #aab5bf;
-            font-size: 12px;
+        .project-description {
+            max-width: 850px;
+            color: #aab4be;
+            font-size: 18px;
+            margin-bottom: 45px;
         }
 
-        .project-link {
-            display: inline-block;
-            width: fit-content;
-            text-decoration: none;
+        .project-description strong {
             color: white;
-            border-bottom: 1px solid #738494;
-            padding-bottom: 7px;
-            transition: 0.3s;
         }
-
-        .project-link:hover {
-            border-color: white;
-            padding-left: 7px;
-        }
-
-        /* PROJECT GALLERY */
 
         .gallery {
-            max-width: 1200px;
-            margin: auto;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 18px;
         }
 
-        .gallery-item {
-            overflow: hidden;
-            background: #111922;
-            border: 1px solid #222e39;
-        }
-
-        .gallery-item img {
+        .gallery img {
             width: 100%;
+            height: 360px;
+            object-fit: cover;
             display: block;
-            transition: 0.5s;
+            border: 1px solid #26313c;
+            transition: 0.4s;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.025);
+        .gallery img:hover {
+            transform: scale(1.02);
+            border-color: #ffffff;
         }
 
-        .gallery-caption {
-            padding: 18px 20px;
-            color: #8997a5;
-            font-size: 13px;
+        .gallery img:first-child {
+            grid-column: span 2;
+            height: 500px;
         }
 
-        /* SKILLS */
+
+        /* =========================
+           SKILLS
+        ========================= */
 
         .skills {
-            background: #0b1016;
+            background: #11171e;
+        }
+
+        .skill-category {
+            margin-bottom: 45px;
+        }
+
+        .skill-category h3 {
+            font-size: 20px;
+            margin-bottom: 18px;
+            color: #dce3e9;
         }
 
         .skill-list {
-            max-width: 1100px;
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
         }
 
         .skill {
-            padding: 13px 19px;
-            border: 1px solid #303c48;
-            color: #c2ccd5;
-            background: #101720;
+            padding: 12px 20px;
+            border: 1px solid #34404c;
+            color: #c8d0d8;
+            background: #151c24;
             transition: 0.3s;
         }
 
         .skill:hover {
-            border-color: #aab6c1;
-            transform: translateY(-3px);
+            border-color: white;
+            color: white;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           SIMULATION
+        ========================= */
+
+        .simulation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .simulation-card {
+            padding: 35px;
+            background: #151c24;
+            border: 1px solid #26313c;
+            min-height: 250px;
+            transition: 0.3s;
+        }
+
+        .simulation-card:hover {
+            transform: translateY(-6px);
+            border-color: white;
+        }
+
+        .simulation-card h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .simulation-card p {
+            color: #8995a1;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
+            background: #11171e;
+        }
+
+        .about-text {
             max-width: 850px;
+            color: #aab4be;
+            font-size: 19px;
         }
 
-        .about p {
-            color: #a5b0bb;
-            font-size: 20px;
-            margin-bottom: 25px;
-        }
-
-        /* CONTACT */
-.contact {
-    text-align: center;
-    background: #0b0f14;
-}
-
-.contact-content {
-    max-width: 650px;
-    margin: auto;
-    color: #aab4be;
-    font-size: 18px;
-}
-
-.contact-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 32px;
-    border: 1px solid #ffffff;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
-
-.contact-button:hover {
-    background: white;
-    color: #0b0f14;
-}
-
-.email {
-    margin-top: 20px;
-    color: #77838f;
-    font-size: 15px;
-}
-        .contact {
-            text-align: center;
-            background:
-                linear-gradient(135deg, #111923, #080c11);
-        }
-
-        .contact h2 {
-            font-size: clamp(40px, 6vw, 70px);
+        .about-text p {
             margin-bottom: 20px;
         }
 
-        .contact p {
-            color: #8c99a6;
-            margin-bottom: 35px;
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+            background:
+                radial-gradient(circle at center, #18222d 0%, #0b0f14 65%);
         }
 
-        /* FOOTER */
+        .contact-content {
+            max-width: 700px;
+            margin: auto;
+            color: #aab4be;
+            font-size: 19px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 16px 35px;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .contact-button:hover {
+            background: white;
+            color: #0b0f14;
+        }
+
+        .email {
+            margin-top: 20px;
+            color: #71808e;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            padding: 35px 20px;
+            padding: 40px 20px;
             text-align: center;
-            color: #566371;
+            color: #68737e;
             border-top: 1px solid #202a34;
-            font-size: 13px;
+            font-size: 14px;
         }
 
-        /* MOBILE */
 
-        @media (max-width: 800px) {
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
 
             nav {
-                padding: 18px 5%;
+                padding: 15px 5%;
             }
 
-            nav .links {
+            nav .nav-links {
                 display: none;
             }
 
-            header {
-                padding-left: 6%;
-                padding-right: 6%;
-            }
-
-            .hero h1 {
-                letter-spacing: -3px;
-            }
-
-            .featured-project {
-                grid-template-columns: 1fr;
-            }
-
-            .featured-image {
-                min-height: 300px;
-            }
-
-            .featured-info {
-                padding: 35px;
+            section {
+                padding: 80px 6%;
             }
 
             .gallery {
                 grid-template-columns: 1fr;
             }
 
-            section {
-                padding: 80px 6%;
+            .gallery img:first-child {
+                grid-column: span 1;
+                height: 300px;
+            }
+
+            .gallery img {
+                height: 260px;
+            }
+
+            .hero h1 {
+                letter-spacing: -3px;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
     <div class="logo">
-        ARASH AMINI
+        AA
     </div>
 
-    <div class="links">
-        <a href="#work">WORK</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
+    <div class="nav-links">
+
+        <a href="#projects">Projects</a>
+        <a href="#simulation">Simulation</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
     </div>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header>
 
     <div class="hero">
 
-        <div class="eyebrow">
-            Mechanical Design Engineer
+        <div class="hero-label">
+            Mechanical Engineering Portfolio
         </div>
 
         <h1>
-            ARASH<br>AMINI
+            ARASH AMINI
         </h1>
 
         <h2>
-            Mechanical Design • CAD • Product Development
+            Mechanical Design & Simulation Engineer
         </h2>
 
         <p>
-            Engineering concepts developed through 3D CAD,
-            mechanical design, product development and
-            design thinking.
+            CAD Design • Product Development • FEA • CFD • Multiphysics Simulation
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#work" class="button">
-                EXPLORE MY WORK
+            <a href="#projects" class="button">
+                VIEW MY WORK
             </a>
 
             <a href="#contact" class="button secondary">
-                GET IN TOUCH
+                CONTACT ME
             </a>
 
         </div>
@@ -486,213 +523,393 @@
 </header>
 
 
-<!-- FEATURED PROJECT -->
+<!-- =========================
+     INTRODUCTION
+========================= -->
 
-<section id="work" class="featured">
+<section class="intro">
 
     <div class="section-label">
-        01 — Featured Project
+        Engineering Approach
     </div>
 
     <h2 class="section-title">
-        Selected Work
+        Design. Simulate. Engineer.
     </h2>
 
-    <div class="featured-project">
+    <div class="intro-text">
 
-        <div class="featured-image">
+        <p>
+            I am a <strong>Mechanical Design & Simulation Engineer</strong>
+            focused on transforming engineering concepts into practical,
+            manufacturable and performance-driven solutions.
+        </p>
 
-            <img
-                src="images/03-hero-render.png"
-                alt="Compact enclosed mobility vehicle concept"
-            >
+        <br>
 
-        </div>
+        <p>
+            My work combines <strong>3D CAD modelling, mechanical design,
+            finite element analysis, CFD and multiphysics simulation</strong>
+            to develop and evaluate engineering systems before physical
+            prototyping.
+        </p>
 
-        <div class="featured-info">
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="section-label">
+        Selected Work
+    </div>
+
+    <h2 class="section-title">
+        Engineering Projects
+    </h2>
+
+    <div class="projects">
+
+
+        <div class="project">
 
             <div class="project-number">
-                PROJECT 01
+                01 / PRODUCT DEVELOPMENT
             </div>
 
             <h3>
-                Compact Enclosed<br>
-                Mobility Vehicle
+                Personal Mobility Vehicle
             </h3>
 
             <p>
-                A compact mobility vehicle concept exploring
-                exterior form, mechanical packaging, user access,
-                occupant ergonomics and product development.
+                Concept development, vehicle architecture,
+                mechanical design, ergonomics and mobility system development.
             </p>
 
-            <div class="tags">
+        </div>
 
-                <span class="tag">CAD DESIGN</span>
-                <span class="tag">PRODUCT DEVELOPMENT</span>
-                <span class="tag">MECHANICAL DESIGN</span>
-                <span class="tag">ERGONOMICS</span>
 
+        <div class="project">
+
+            <div class="project-number">
+                02 / MECHANICAL DESIGN
             </div>
 
-            <a
-                href="project-mobility.html"
-                class="project-link"
-            >
-                VIEW FULL PROJECT →
-            </a>
+            <h3>
+                Mechanical Systems
+            </h3>
+
+            <p>
+                3D CAD modelling, assemblies, mechanisms,
+                component development and engineering drawings.
+            </p>
 
         </div>
+
+
+        <div class="project">
+
+            <div class="project-number">
+                03 / FEA
+            </div>
+
+            <h3>
+                Structural Analysis
+            </h3>
+
+            <p>
+                Finite element modelling, structural analysis,
+                stress evaluation and engineering simulation.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <div class="project-number">
+                04 / MULTIPHYSICS
+            </div>
+
+            <h3>
+                Simulation & CFD
+            </h3>
+
+            <p>
+                CFD, heat transfer, fluid flow and coupled
+                multiphysics engineering analysis.
+            </p>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- PROJECT VISUALS -->
+<!-- =========================
+     FEATURED PROJECT
+========================= -->
 
-<section>
+<section class="featured">
 
     <div class="section-label">
-        Project Visuals
+        Featured Project / 01
     </div>
 
     <h2 class="section-title">
-        Design Development
+        Personal Mobility Vehicle
     </h2>
+
+    <div class="project-description">
+
+        <p>
+            A compact personal mobility concept developed through
+            <strong>industrial design, mechanical engineering,
+            ergonomic evaluation and vehicle architecture.</strong>
+        </p>
+
+        <br>
+
+        <p>
+            The project explores vehicle packaging, occupant access,
+            seating configuration, mechanical mechanisms, exterior
+            surfaces and energy concepts while considering the interaction
+            between the vehicle and its user.
+        </p>
+
+    </div>
+
 
     <div class="gallery">
 
-        <div class="gallery-item">
+        <img src="images/01-overview.png"
+             alt="Personal mobility vehicle - overall design">
 
-            <img
-                src="images/01-overview.png"
-                alt="Mobility vehicle CAD overview"
-            >
+        <img src="images/02-mechanism-detail.png"
+             alt="Mobility vehicle mechanical mechanism">
 
-            <div class="gallery-caption">
-                Exterior form and overall vehicle architecture
-            </div>
+        <img src="images/03-hero-render.png"
+             alt="Personal mobility vehicle rendering">
 
-        </div>
+        <img src="images/04-energy-concept.png"
+             alt="Solar energy concept for mobility vehicle">
 
+        <img src="images/05-user-access.png"
+             alt="Vehicle user access study">
 
-        <div class="gallery-item">
-
-            <img
-                src="images/02-mechanism-detail.png"
-                alt="Mobility vehicle mechanical detail"
-            >
-
-            <div class="gallery-caption">
-                Mechanical packaging and lower-body detail
-            </div>
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="images/04-energy-concept.png"
-                alt="Mobility vehicle energy concept"
-            >
-
-            <div class="gallery-caption">
-                Energy and infrastructure concept development
-            </div>
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="images/05-user-access.png"
-                alt="Mobility vehicle user access study"
-            >
-
-            <div class="gallery-caption">
-                User access and interaction study
-            </div>
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="images/06-ergonomics.png"
-                alt="Mobility vehicle ergonomics study"
-            >
-
-            <div class="gallery-caption">
-                Occupant ergonomics and usability development
-            </div>
-
-        </div>
+        <img src="images/06-ergonomics.png"
+             alt="Vehicle ergonomics study">
 
     </div>
 
 </section>
 
 
-<!-- SKILLS -->
+<!-- =========================
+     SIMULATION
+========================= -->
+
+<section id="simulation">
+
+    <div class="section-label">
+        Engineering Analysis
+    </div>
+
+    <h2 class="section-title">
+        Simulation & Analysis
+    </h2>
+
+    <div class="simulation-grid">
+
+
+        <div class="simulation-card">
+
+            <h3>
+                Finite Element Analysis
+            </h3>
+
+            <p>
+                Structural and mechanical analysis using finite element
+                methods to evaluate stress, deformation, loads,
+                stiffness and structural performance.
+            </p>
+
+        </div>
+
+
+        <div class="simulation-card">
+
+            <h3>
+                Abaqus
+            </h3>
+
+            <p>
+                Advanced finite element modelling and nonlinear
+                simulation using Abaqus for structural and mechanical
+                engineering applications.
+            </p>
+
+        </div>
+
+
+        <div class="simulation-card">
+
+            <h3>
+                CFD
+            </h3>
+
+            <p>
+                Computational fluid dynamics analysis for flow,
+                pressure, velocity, thermal behaviour and
+                fluid-system interaction.
+            </p>
+
+        </div>
+
+
+        <div class="simulation-card">
+
+            <h3>
+                COMSOL Multiphysics
+            </h3>
+
+            <p>
+                Multiphysics modelling involving coupled physical
+                phenomena including structural, thermal, fluid and
+                electromagnetic systems.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section id="skills" class="skills">
 
     <div class="section-label">
-        Engineering Capabilities
+        Technical Capabilities
     </div>
 
     <h2 class="section-title">
-        Skills & Expertise
+        Engineering Skills
     </h2>
 
-    <div class="skill-list">
 
-        <div class="skill">3D CAD</div>
-        <div class="skill">Mechanical Design</div>
-        <div class="skill">Product Development</div>
-        <div class="skill">CAD Modelling</div>
-        <div class="skill">Mechanical Assemblies</div>
-        <div class="skill">Engineering Drawings</div>
-        <div class="skill">Design Development</div>
-        <div class="skill">Concept Development</div>
-        <div class="skill">Ergonomics</div>
-        <div class="skill">Mechanical Packaging</div>
+    <div class="skill-category">
+
+        <h3>
+            CAD & Mechanical Design
+        </h3>
+
+        <div class="skill-list">
+
+            <div class="skill">SolidWorks</div>
+            <div class="skill">AutoCAD</div>
+            <div class="skill">3D CAD</div>
+            <div class="skill">Mechanical Design</div>
+            <div class="skill">Product Development</div>
+            <div class="skill">Mechanical Assemblies</div>
+            <div class="skill">Engineering Drawings</div>
+            <div class="skill">Mechanism Design</div>
+            <div class="skill">Sheet Metal Design</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="skill-category">
+
+        <h3>
+            Simulation & Analysis
+        </h3>
+
+        <div class="skill-list">
+
+            <div class="skill">Finite Element Analysis</div>
+            <div class="skill">FEA</div>
+            <div class="skill">Abaqus</div>
+            <div class="skill">CFD</div>
+            <div class="skill">COMSOL Multiphysics</div>
+            <div class="skill">Structural Analysis</div>
+            <div class="skill">Thermal Analysis</div>
+            <div class="skill">Multiphysics Simulation</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="skill-category">
+
+        <h3>
+            Engineering Development
+        </h3>
+
+        <div class="skill-list">
+
+            <div class="skill">Concept Development</div>
+            <div class="skill">Design Optimization</div>
+            <div class="skill">Design for Manufacturing</div>
+            <div class="skill">Product Development</div>
+            <div class="skill">Engineering Problem Solving</div>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-<section id="about">
+<section id="about" class="about">
 
     <div class="section-label">
-        About
+        Profile
     </div>
 
     <h2 class="section-title">
-        Engineering with<br>
-        purpose.
+        About Me
     </h2>
 
-    <div class="about">
+    <div class="about-text">
 
         <p>
-            I am a mechanical design engineer focused on
-            transforming engineering concepts into detailed
-            and visually clear mechanical designs.
+            I am a mechanical engineer specializing in
+            <strong>mechanical design, CAD modelling and engineering
+            simulation.</strong>
         </p>
 
         <p>
-            My work combines CAD modelling, mechanical design,
-            product development and engineering thinking to
-            explore how products can function, interact with
-            people and ultimately become practical solutions.
+            My engineering workflow combines digital product development
+            with numerical analysis. I can develop a mechanical concept
+            in CAD, investigate its structural behaviour using
+            <strong>finite element analysis</strong>, and study fluid,
+            thermal or coupled physical phenomena using
+            <strong>CFD and COMSOL Multiphysics.</strong>
+        </p>
+
+        <p>
+            I am particularly interested in challenging engineering
+            problems where mechanical design and simulation need to work
+            together to create a reliable and practical solution.
         </p>
 
     </div>
@@ -700,44 +917,34 @@
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact" class="contact">
 
-    <h2>
-        Have a project?
+    <div class="section-label">
+        Get In Touch
+    </div>
+
+    <h2 class="section-title">
+        Let's Work Together
     </h2>
 
-    <p>
-        I'm open to mechanical design, CAD and product
-        development opportunities.
-    </p>
-
-    <a
-        href="mailto:your-email@example.com"
-        class="button"
-    >
-        CONTACT ME
-    </a>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<section class="contact">
-
-    <h2 class="section-title">Let's Work Together</h2>
-
     <div class="contact-content">
 
         <p>
-            Have a project, product idea, or mechanical design challenge?
-            I would be happy to discuss how I can help.
+            Have a mechanical design, CAD, FEA, CFD or simulation project?
+            I would be happy to discuss the engineering requirements
+            and possible solutions.
         </p>
 
-        <a href="mailto:arshamini@gmail.com" class="contact-button">
+        <a
+            href="mailto:arshamini@gmail.com"
+            class="contact-button">
+
             GET IN TOUCH
+
         </a>
 
         <p class="email">
@@ -749,34 +956,16 @@
 </section>
 
 
-<section class="contact">
-
-    <h2 class="section-title">Let's Work Together</h2>
-
-    <div class="contact-content">
-
-        <p>
-            Have a project, product idea, or mechanical design challenge?
-            I would be happy to discuss how I can help.
-        </p>
-
-        <a href="mailto:arshamini@gmail.com" class="contact-button">
-            GET IN TOUCH
-        </a>
-
-        <p class="email">
-            arshamini@gmail.com
-        </p>
-
-    </div>
-
-</section>
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    © 2026 Arash Amini — Mechanical Design Engineer
+    © 2026 Arash Amini — Mechanical Design & Simulation Engineer
 
 </footer>
+
 
 </body>
 </html>
