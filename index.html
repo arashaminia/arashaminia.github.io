@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arash Amini | Mechanical Design Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f14;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0b0f14, #18212b);
+        }
+
+        .hero {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 90px);
+            letter-spacing: -3px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #b7c0c9;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #8995a1;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 14px 28px;
+            border: 1px solid #ffffff;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: white;
+            color: #0b0f14;
+        }
+
+        section {
+            padding: 90px 7%;
+        }
+
+        .section-title {
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            min-height: 320px;
+            background: #151c24;
+            border: 1px solid #26313c;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+            border-color: #ffffff;
+        }
+
+        .project-number {
+            color: #77838f;
+            font-size: 14px;
+            margin-bottom: auto;
+        }
+
+        .project h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #8995a1;
+        }
+
+        .skills {
+            background: #11171e;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 12px 20px;
+            border: 1px solid #34404c;
+            color: #c8d0d8;
+        }
+
+        .about {
+            max-width: 800px;
+            color: #aab4be;
+            font-size: 19px;
+        }
+
+        footer {
+            padding: 50px 20px;
+            text-align: center;
+            color: #68737e;
+            border-top: 1px solid #202a34;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero">
+
+        <h1>ARASH AMINI</h1>
+
+        <h2>Mechanical Design Engineer</h2>
+
+        <p>
+            CAD Design • Product Development • Mechanical Engineering
+        </p>
+
+        <a href="#projects" class="button">
+            VIEW MY WORK
+        </a>
+
+    </div>
+</header>
+
+
+<section id="projects">
+
+    <h2 class="section-title">Selected Projects</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <div class="project-number">01</div>
+            <h3>Robotic Arm</h3>
+            <p>
+                Mechanical design, CAD modelling and assembly development.
+            </p>
+        </div>
+
+        <div class="project">
+            <div class="project-number">02</div>
+            <h3>Sheet Metal Enclosure</h3>
+            <p>
+                3D modelling, sheet-metal design and manufacturing preparation.
+            </p>
+        </div>
+
+        <div class="project">
+            <div class="project-number">03</div>
+            <h3>Mechanical Assembly</h3>
+            <p>
+                Component design, assembly modelling and engineering drawings.
+            </p>
+        </div>
+
+        <div class="project">
+            <div class="project-number">04</div>
+            <h3>Product Design</h3>
+            <p>
+                Concept development and mechanical product design.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="skills">
+
+    <h2 class="section-title">Engineering Skills</h2>
+
+    <div class="skill-list">
+
+        <div class="skill">SolidWorks</div>
+        <div class="skill">AutoCAD</div>
+        <div class="skill">3D CAD</div>
+        <div class="skill">Mechanical Design</div>
+        <div class="skill">Product Development</div>
+        <div class="skill">Engineering Drawings</div>
+        <div class="skill">Sheet Metal Design</div>
+        <div class="skill">Assemblies</div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am a mechanical design engineer focused on CAD modelling,
+            mechanical design and product development.
+        </p>
+
+        <br>
+
+        <p>
+            I enjoy turning engineering concepts into practical,
+            manufacturable designs through detailed 3D modelling,
+            assemblies and technical drawings.
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 Arash Amini — Mechanical Design Engineer
+
+</footer>
+
+</body>
+</html>
