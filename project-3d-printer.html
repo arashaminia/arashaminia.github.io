@@ -9,10 +9,7 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="3D Printer Mechanical Design Project by Arash Amini">
-
-    <meta name="author"
-          content="Arash Amini">
+          content="Arash Amini | Mechanical Design Engineer | CAD | FEA | CFD | COMSOL Multiphysics">
 
     <title>3D Printer | Arash Amini</title>
 
@@ -20,7 +17,7 @@
     <style>
 
         /* =====================================================
-           GLOBAL
+           RESET
         ===================================================== */
 
         * {
@@ -36,18 +33,10 @@
 
 
         body {
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
+            font-family: Arial, Helvetica, sans-serif;
             background: #0b0f14;
-
             color: #ffffff;
-
             line-height: 1.7;
-
             overflow-x: hidden;
         }
 
@@ -59,15 +48,9 @@
 
 
         img {
-            max-width: 100%;
-        }
-
-
-        .container {
-
-            width: min(1200px, 88%);
-
-            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
 
@@ -94,9 +77,11 @@
 
             padding: 0 6%;
 
-            background: rgba(11, 15, 20, 0.90);
+            background: rgba(11, 15, 20, 0.94);
 
             backdrop-filter: blur(12px);
+
+            -webkit-backdrop-filter: blur(12px);
 
             border-bottom: 1px solid #202a34;
 
@@ -106,25 +91,31 @@
 
         .logo {
 
+            white-space: nowrap;
+
+            flex-shrink: 0;
+
             font-size: 18px;
 
-            font-weight: bold;
+            font-weight: 700;
 
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+
+            color: #ffffff;
         }
 
 
-        .nav-right {
+        .nav-links {
 
             display: flex;
 
-            gap: 25px;
-
             align-items: center;
+
+            gap: 28px;
         }
 
 
-        .nav-right a {
+        .nav-links a {
 
             color: #8995a1;
 
@@ -134,9 +125,23 @@
         }
 
 
-        .nav-right a:hover {
+        .nav-links a:hover {
 
-            color: white;
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           CONTAINER
+        ===================================================== */
+
+        .container {
+
+            width: 88%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
         }
 
 
@@ -144,9 +149,9 @@
            HERO
         ===================================================== */
 
-        header {
+        .hero {
 
-            min-height: 88vh;
+            min-height: 92vh;
 
             display: flex;
 
@@ -160,7 +165,7 @@
 
                 linear-gradient(
                     rgba(11, 15, 20, 0.72),
-                    rgba(11, 15, 20, 0.94)
+                    rgba(11, 15, 20, 0.95)
                 ),
 
                 url("02-3d-printer-render.png.png")
@@ -169,63 +174,19 @@
         }
 
 
-        header::before {
+        .hero-content {
 
-            content: "";
+            max-width: 900px;
 
-            position: absolute;
-
-            width: 600px;
-
-            height: 600px;
-
-            border: 1px solid #27333e;
-
-            border-radius: 50%;
-
-            right: -230px;
-
-            top: 80px;
-
-            opacity: 0.45;
-        }
-
-
-        header::after {
-
-            content: "";
-
-            position: absolute;
-
-            width: 850px;
-
-            height: 850px;
-
-            border: 1px solid #1b252e;
-
-            border-radius: 50%;
-
-            right: -360px;
-
-            top: -40px;
-
-            opacity: 0.35;
-        }
-
-
-        .hero {
+            padding-top: 70px;
 
             position: relative;
 
             z-index: 2;
-
-            max-width: 900px;
-
-            padding-top: 80px;
         }
 
 
-        .back-link {
+        .back {
 
             display: inline-block;
 
@@ -239,13 +200,13 @@
         }
 
 
-        .back-link:hover {
+        .back:hover {
 
             color: #ffffff;
         }
 
 
-        .project-number {
+        .project-label {
 
             color: #718092;
 
@@ -261,12 +222,7 @@
 
         .hero h1 {
 
-            font-size:
-                clamp(
-                    55px,
-                    9vw,
-                    105px
-                );
+            font-size: clamp(55px, 9vw, 105px);
 
             line-height: 0.95;
 
@@ -278,30 +234,33 @@
 
         .hero h2 {
 
-            font-size:
-                clamp(
-                    22px,
-                    3vw,
-                    30px
-                );
+            font-size: clamp(22px, 3vw, 30px);
 
-            font-weight: normal;
+            font-weight: 400;
 
             color: #bbc5ce;
 
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
 
 
         .hero-description {
 
-            max-width: 760px;
+            max-width: 800px;
 
-            color: #929eaa;
+            color: #a0abb5;
 
             font-size: 19px;
 
-            line-height: 1.8;
+            line-height: 1.85;
+        }
+
+
+        .hero-description strong {
+
+            color: #ffffff;
+
+            font-weight: 600;
         }
 
 
@@ -315,13 +274,13 @@
         }
 
 
-        .section-dark {
+        .dark-section {
 
             background: #11171e;
         }
 
 
-        .section-number {
+        .section-label {
 
             color: #687786;
 
@@ -335,12 +294,7 @@
 
         .section-title {
 
-            font-size:
-                clamp(
-                    35px,
-                    5vw,
-                    50px
-                );
+            font-size: clamp(36px, 5vw, 52px);
 
             line-height: 1.1;
 
@@ -363,18 +317,15 @@
 
 
         /* =====================================================
-           PROJECT INFORMATION
+           PROJECT DETAILS
         ===================================================== */
 
-        .info-grid {
+        .details {
 
             display: grid;
 
             grid-template-columns:
-                repeat(
-                    4,
-                    minmax(0, 1fr)
-                );
+                repeat(4, 1fr);
 
             gap: 18px;
 
@@ -382,17 +333,27 @@
         }
 
 
-        .info-box {
+        .detail {
+
+            padding: 28px;
 
             background: #151c24;
 
             border: 1px solid #26313c;
 
-            padding: 28px;
+            transition: 0.3s;
         }
 
 
-        .info-label {
+        .detail:hover {
+
+            transform: translateY(-4px);
+
+            border-color: #526170;
+        }
+
+
+        .detail-label {
 
             color: #71808e;
 
@@ -406,7 +367,7 @@
         }
 
 
-        .info-value {
+        .detail-value {
 
             color: #dce2e7;
 
@@ -415,7 +376,7 @@
 
 
         /* =====================================================
-           MAIN GALLERY
+           IMAGE GALLERY
         ===================================================== */
 
         .gallery {
@@ -424,13 +385,15 @@
 
             display: grid;
 
-            gap: 60px;
+            grid-template-columns: 1fr;
+
+            gap: 55px;
         }
 
 
-        .gallery-item {
+        .image-card {
 
-            background: #11171e;
+            background: #0d1218;
 
             border: 1px solid #26313c;
 
@@ -438,25 +401,25 @@
         }
 
 
-        .gallery-item img {
+        .image-card img {
 
             width: 100%;
 
-            display: block;
-
             height: auto;
 
-            transition: 0.5s;
+            display: block;
+
+            transition: transform 0.5s ease;
         }
 
 
-        .gallery-item:hover img {
+        .image-card:hover img {
 
             transform: scale(1.015);
         }
 
 
-        .gallery-caption {
+        .image-caption {
 
             padding: 20px 25px;
 
@@ -469,7 +432,7 @@
 
 
         /* =====================================================
-           ENGINEERING APPROACH
+           ENGINEERING AREAS
         ===================================================== */
 
         .engineering-grid {
@@ -477,10 +440,7 @@
             display: grid;
 
             grid-template-columns:
-                repeat(
-                    2,
-                    minmax(0, 1fr)
-                );
+                repeat(2, 1fr);
 
             gap: 22px;
 
@@ -504,7 +464,7 @@
 
             transform: translateY(-5px);
 
-            border-color: #536272;
+            border-color: #526170;
         }
 
 
@@ -513,6 +473,8 @@
             color: #687786;
 
             font-size: 13px;
+
+            letter-spacing: 2px;
 
             margin-bottom: 20px;
         }
@@ -537,7 +499,7 @@
 
 
         /* =====================================================
-           SKILLS
+           EXPERTISE
         ===================================================== */
 
         .skills {
@@ -546,7 +508,7 @@
 
             flex-wrap: wrap;
 
-            gap: 10px;
+            gap: 11px;
 
             margin-top: 40px;
         }
@@ -554,15 +516,57 @@
 
         .skill {
 
-            padding: 11px 17px;
+            padding: 12px 18px;
 
             border: 1px solid #34404c;
 
             background: #151c24;
 
-            color: #bdc7d0;
+            color: #c3ccd4;
 
             font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+
+        .skill:hover {
+
+            border-color: #ffffff;
+
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           PROFESSIONAL STATEMENT
+        ===================================================== */
+
+        .statement {
+
+            max-width: 900px;
+
+            margin-top: 45px;
+
+            padding: 35px;
+
+            background: #151c24;
+
+            border-left: 2px solid #667584;
+
+            color: #aab4bd;
+
+            font-size: 19px;
+
+            line-height: 1.9;
+        }
+
+
+        .statement strong {
+
+            color: #ffffff;
+
+            font-weight: 600;
         }
 
 
@@ -593,13 +597,13 @@
 
         .contact-text {
 
-            color: #8e9aa6;
-
-            font-size: 18px;
-
             max-width: 700px;
 
             margin: 0 auto;
+
+            color: #8e9aa6;
+
+            font-size: 18px;
         }
 
 
@@ -609,18 +613,13 @@
 
             margin-top: 35px;
 
-            font-size:
-                clamp(
-                    21px,
-                    4vw,
-                    32px
-                );
-
-            color: white;
+            padding-bottom: 7px;
 
             border-bottom: 1px solid #536272;
 
-            padding-bottom: 6px;
+            color: #ffffff;
+
+            font-size: clamp(21px, 4vw, 32px);
 
             transition: 0.3s;
         }
@@ -628,13 +627,9 @@
 
         .email:hover {
 
-            border-color: white;
+            border-color: #ffffff;
         }
 
-
-        /* =====================================================
-           BUTTONS
-        ===================================================== */
 
         .buttons {
 
@@ -656,7 +651,7 @@
 
             padding: 13px 25px;
 
-            border: 1px solid white;
+            border: 1px solid #ffffff;
 
             font-size: 14px;
 
@@ -666,7 +661,7 @@
 
         .button:hover {
 
-            background: white;
+            background: #ffffff;
 
             color: #0b0f14;
         }
@@ -684,9 +679,9 @@
 
             background: transparent;
 
-            border-color: white;
+            border-color: #ffffff;
 
-            color: white;
+            color: #ffffff;
         }
 
 
@@ -717,18 +712,15 @@
 
 
         /* =====================================================
-           MOBILE
+           TABLET
         ===================================================== */
 
         @media (max-width: 900px) {
 
-            .info-grid {
+            .details {
 
                 grid-template-columns:
-                    repeat(
-                        2,
-                        minmax(0, 1fr)
-                    );
+                    repeat(2, 1fr);
             }
 
 
@@ -740,6 +732,10 @@
         }
 
 
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
         @media (max-width: 600px) {
 
             nav {
@@ -748,15 +744,29 @@
             }
 
 
-            .nav-right {
+            .logo {
+
+                font-size: 15px;
+
+                letter-spacing: 1px;
+            }
+
+
+            .nav-links {
 
                 gap: 12px;
             }
 
 
-            .nav-right a {
+            .nav-links a {
 
                 font-size: 12px;
+            }
+
+
+            .container {
+
+                width: 90%;
             }
 
 
@@ -766,9 +776,9 @@
             }
 
 
-            .container {
+            .hero {
 
-                width: 90%;
+                min-height: 85vh;
             }
 
 
@@ -786,7 +796,7 @@
             }
 
 
-            .info-grid {
+            .details {
 
                 grid-template-columns: 1fr;
             }
@@ -795,6 +805,14 @@
             .engineering-grid {
 
                 grid-template-columns: 1fr;
+            }
+
+
+            .statement {
+
+                padding: 25px;
+
+                font-size: 17px;
             }
 
         }
@@ -813,12 +831,15 @@
 
 <nav>
 
-    <a href="index.html" class="logo">
+    <a
+        href="index.html"
+        class="logo"
+    >
         ARASH AMINI
     </a>
 
 
-    <div class="nav-right">
+    <div class="nav-links">
 
         <a href="index.html">
             Portfolio
@@ -838,42 +859,52 @@
      HERO
 ===================================================== -->
 
-<header>
+<header class="hero">
 
     <div class="container">
 
-        <div class="hero">
+        <div class="hero-content">
 
 
             <a
                 href="index.html"
-                class="back-link"
+                class="back"
             >
                 ← BACK TO PORTFOLIO
             </a>
 
 
-            <div class="project-number">
+            <div class="project-label">
+
                 PROJECT 02 — MACHINE DESIGN
+
             </div>
 
 
             <h1>
+
                 3D PRINTER
+
             </h1>
 
 
             <h2>
+
                 Mechanical Design & CAD Development
+
             </h2>
 
 
             <p class="hero-description">
 
-                A mechanical design project focused on the
-                development of a desktop 3D printer, including
-                structural architecture, motion systems,
-                component integration and detailed CAD modelling.
+                I develop mechanical systems from concept
+                to detailed CAD, combining
+                <strong>mechanical design</strong>
+                with
+                <strong>finite element analysis</strong>,
+                <strong>CFD</strong>
+                and
+                <strong>multiphysics simulation</strong>.
 
             </p>
 
@@ -895,83 +926,90 @@
     <div class="container">
 
 
-        <div class="section-number">
+        <div class="section-label">
+
             01 / PROJECT OVERVIEW
+
         </div>
 
 
         <h2 class="section-title">
+
             Project Overview
+
         </h2>
 
 
         <p class="section-text">
 
-            This project involved the mechanical development
-            of a 3D printer platform with a focus on structural
-            organisation, mechanical integration, motion
-            systems and overall machine architecture.
+            This project focuses on the mechanical design
+            and development of a desktop 3D printer.
+
+            The design process involved developing the
+            machine architecture, arranging the major
+            mechanical components and creating a coherent
+            three-dimensional CAD assembly.
 
             <br><br>
 
-            The complete concept was developed as a three-
-            dimensional mechanical design, allowing the major
-            components and systems to be considered together
-            as an integrated machine.
+            The objective was to create a practical mechanical
+            system with an organised structure and integrated
+            motion components suitable for further engineering
+            development and analysis.
 
         </p>
 
 
-        <div class="info-grid">
+        <div class="details">
 
 
-            <div class="info-box">
+            <div class="detail">
 
-                <div class="info-label">
+                <div class="detail-label">
                     Project
                 </div>
 
-                <div class="info-value">
+                <div class="detail-value">
                     3D Printer
                 </div>
 
             </div>
 
 
-            <div class="info-box">
+            <div class="detail">
 
-                <div class="info-label">
+                <div class="detail-label">
                     Discipline
                 </div>
 
-                <div class="info-value">
+                <div class="detail-value">
                     Mechanical Design
                 </div>
 
             </div>
 
 
-            <div class="info-box">
+            <div class="detail">
 
-                <div class="info-label">
-                    Primary Work
+                <div class="detail-label">
+                    Primary Tool
                 </div>
 
-                <div class="info-value">
+                <div class="detail-value">
                     3D CAD
                 </div>
 
             </div>
 
 
-            <div class="info-box">
+            <div class="detail">
 
-                <div class="info-label">
-                    Engineering
+                <div class="detail-label">
+                    Engineering Focus
                 </div>
 
-                <div class="info-value">
-                    Machine Design
+                <div class="detail-value">
+                    Machine Development
                 </div>
 
             </div>
@@ -986,28 +1024,32 @@
 
 
 <!-- =====================================================
-     DESIGN GALLERY
+     CAD GALLERY
 ===================================================== -->
 
-<section class="section-dark">
+<section class="dark-section">
 
     <div class="container">
 
 
-        <div class="section-number">
+        <div class="section-label">
+
             02 / CAD DEVELOPMENT
+
         </div>
 
 
         <h2 class="section-title">
+
             Design & Visualisation
+
         </h2>
 
 
         <p class="section-text">
 
-            The following views show the developed 3D printer
-            concept and its mechanical architecture.
+            Selected CAD views of the developed 3D printer
+            mechanical system.
 
         </p>
 
@@ -1017,18 +1059,18 @@
 
             <!-- IMAGE 01 -->
 
-            <div class="gallery-item">
+            <div class="image-card">
 
                 <img
-                    src="01-3d-printer-render.png.png"
-                    alt="3D printer mechanical design - view 01"
+                    src="01-3d-printer-cad.png"
+                    alt="3D printer CAD design"
                 >
 
 
-                <div class="gallery-caption">
+                <div class="image-caption">
 
-                    3D printer mechanical design — overall
-                    CAD visualisation.
+                    Mechanical CAD development and
+                    structural organisation of the 3D printer.
 
                 </div>
 
@@ -1038,18 +1080,18 @@
 
             <!-- IMAGE 02 -->
 
-            <div class="gallery-item">
+            <div class="image-card">
 
                 <img
                     src="02-3d-printer-render.png.png"
-                    alt="3D printer mechanical design - view 02"
+                    alt="3D printer mechanical render"
                 >
 
 
-                <div class="gallery-caption">
+                <div class="image-caption">
 
-                    3D printer mechanical design — alternative
-                    design view.
+                    Final visualisation of the 3D printer
+                    mechanical design.
 
                 </div>
 
@@ -1073,27 +1115,35 @@
     <div class="container">
 
 
-        <div class="section-number">
+        <div class="section-label">
+
             03 / ENGINEERING APPROACH
+
         </div>
 
 
         <h2 class="section-title">
+
             Engineering Approach
+
         </h2>
 
 
         <p class="section-text">
 
-            The design process focused on developing a coherent
-            mechanical system in which the major components
-            could work together as an integrated machine.
+            My engineering workflow combines mechanical
+            design with numerical simulation and analysis.
+            This allows a design to be evaluated not only
+            geometrically, but also from a performance and
+            engineering perspective.
 
         </p>
 
 
         <div class="engineering-grid">
 
+
+            <!-- MECHANICAL DESIGN -->
 
             <div class="engineering-card">
 
@@ -1103,21 +1153,26 @@
 
 
                 <h3>
-                    Mechanical Architecture
+
+                    Mechanical Design
+
                 </h3>
 
 
                 <p>
 
-                    Development of the overall machine structure
-                    and arrangement of the major mechanical
-                    subsystems within the available design space.
+                    Development of mechanical components,
+                    assemblies and machine architectures
+                    from initial concept through detailed
+                    three-dimensional CAD.
 
                 </p>
 
             </div>
 
 
+
+            <!-- FEA -->
 
             <div class="engineering-card">
 
@@ -1127,21 +1182,25 @@
 
 
                 <h3>
-                    Motion System
+
+                    Finite Element Analysis
+
                 </h3>
 
 
                 <p>
 
-                    Consideration of the mechanical elements
-                    required to provide controlled movement
-                    within the printer assembly.
+                    Finite element analysis for evaluating
+                    structural behaviour, stresses,
+                    deformation and mechanical performance.
 
                 </p>
 
             </div>
 
 
+
+            <!-- CFD -->
 
             <div class="engineering-card">
 
@@ -1151,22 +1210,26 @@
 
 
                 <h3>
-                    Component Integration
+
+                    CFD Simulation
+
                 </h3>
 
 
                 <p>
 
-                    Integration of individual mechanical
-                    components into a complete assembly while
-                    maintaining functional relationships between
-                    the subsystems.
+                    Computational fluid dynamics simulations
+                    for analysing fluid flow, pressure,
+                    thermal behaviour and related engineering
+                    problems.
 
                 </p>
 
             </div>
 
 
+
+            <!-- COMSOL -->
 
             <div class="engineering-card">
 
@@ -1176,16 +1239,18 @@
 
 
                 <h3>
-                    Design Development
+
+                    Multiphysics Simulation
+
                 </h3>
 
 
                 <p>
 
-                    Iterative development of the CAD model to
-                    improve the overall machine concept,
-                    component arrangement and mechanical
-                    organisation.
+                    Multiphysics modelling using COMSOL
+                    Multiphysics to investigate coupled
+                    physical phenomena and complex
+                    engineering systems.
 
                 </p>
 
@@ -1201,29 +1266,85 @@
 
 
 <!-- =====================================================
-     ENGINEERING SKILLS
+     PROFESSIONAL STATEMENT
 ===================================================== -->
 
-<section class="section-dark">
+<section class="dark-section">
 
     <div class="container">
 
 
-        <div class="section-number">
-            04 / TECHNICAL SKILLS
+        <div class="section-label">
+
+            04 / ENGINEERING PHILOSOPHY
+
         </div>
 
 
         <h2 class="section-title">
-            Tools & Expertise
+
+            From Geometry to Performance
+
+        </h2>
+
+
+        <div class="statement">
+
+            I approach engineering design as more than
+            creating a 3D model.
+
+            <br><br>
+
+            My workflow combines
+            <strong>mechanical design</strong>,
+            <strong>CAD development</strong>,
+            <strong>finite element analysis</strong>,
+            <strong>CFD</strong> and
+            <strong>multiphysics simulation</strong>
+            to understand how a system will perform before
+            physical prototyping.
+
+            <br><br>
+
+            This allows mechanical concepts to be developed
+            with both geometry and engineering performance
+            in mind.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TECHNICAL EXPERTISE
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            05 / TECHNICAL EXPERTISE
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Tools & Capabilities
+
         </h2>
 
 
         <p class="section-text">
 
-            My broader engineering workflow combines
-            mechanical design with numerical simulation
-            and engineering analysis.
+            My technical background covers mechanical design,
+            computer-aided engineering and numerical simulation.
 
         </p>
 
@@ -1252,12 +1373,12 @@
 
 
             <div class="skill">
-                Mechanical Assemblies
+                Product Development
             </div>
 
 
             <div class="skill">
-                Product Development
+                Mechanical Assemblies
             </div>
 
 
@@ -1272,7 +1393,7 @@
 
 
             <div class="skill">
-                FEA
+                Finite Element Analysis
             </div>
 
 
@@ -1319,22 +1440,25 @@
         <div class="contact-content">
 
 
-            <div class="section-number">
-                05 / CONTACT
+            <div class="section-label">
+
+                06 / CONTACT
+
             </div>
 
 
             <h2 class="section-title">
+
                 Let's Work Together
+
             </h2>
 
 
             <p class="contact-text">
 
-                Interested in mechanical design, CAD,
-                FEA, CFD or multiphysics engineering?
-
-                Feel free to get in touch.
+                I am available for mechanical design,
+                CAD development, finite element analysis,
+                CFD and multiphysics engineering projects.
 
             </p>
 
@@ -1343,7 +1467,9 @@
                 href="mailto:arshamini@gmail.com"
                 class="email"
             >
+
                 arshamini@gmail.com
+
             </a>
 
 
@@ -1354,7 +1480,9 @@
                     href="mailto:arshamini@gmail.com"
                     class="button"
                 >
+
                     SEND AN EMAIL
+
                 </a>
 
 
@@ -1362,7 +1490,9 @@
                     href="index.html"
                     class="button button-secondary"
                 >
+
                     BACK TO PORTFOLIO
+
                 </a>
 
 
@@ -1383,12 +1513,16 @@
 <footer>
 
     <div class="footer-name">
+
         ARASH AMINI
+
     </div>
 
 
     <div>
+
         Mechanical Design Engineer · CAD · FEA · CFD · Multiphysics
+
     </div>
 
 
@@ -1396,7 +1530,9 @@
 
 
     <div>
+
         © 2026 Arash Amini
+
     </div>
 
 </footer>
