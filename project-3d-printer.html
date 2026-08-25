@@ -9,7 +9,7 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Arash Amini | Mechanical Design Engineer | CAD | FEA | CFD | COMSOL Multiphysics">
+          content="Arash Amini | Mechanical Design Engineer | CAD | FEA | CFD | Multiphysics">
 
     <title>3D Printer | Arash Amini</title>
 
@@ -17,7 +17,7 @@
     <style>
 
         /* =====================================================
-           RESET
+           GLOBAL
         ===================================================== */
 
         * {
@@ -42,15 +42,15 @@
 
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
         }
 
 
         img {
+            display: block;
             width: 100%;
             height: auto;
-            display: block;
         }
 
 
@@ -69,37 +69,56 @@
 
             height: 72px;
 
+            padding-left: 6%;
+            padding-right: 6%;
+
             display: flex;
 
             align-items: center;
 
             justify-content: space-between;
 
-            padding: 0 6%;
-
-            background: rgba(11, 15, 20, 0.94);
+            background: rgba(11, 15, 20, 0.96);
 
             backdrop-filter: blur(12px);
-
             -webkit-backdrop-filter: blur(12px);
 
             border-bottom: 1px solid #202a34;
 
-            z-index: 1000;
+            z-index: 9999;
         }
 
 
-        .logo {
-    white-space: nowrap;
-    display: inline-block;
-    width: max-content;
-    flex-shrink: 0;
+        /*
+           IMPORTANT:
+           The following rules force ARASH AMINI
+           to remain on ONE SINGLE LINE.
+        */
 
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #ffffff;
-}
+        .logo {
+
+            display: block;
+
+            white-space: nowrap !important;
+
+            width: auto !important;
+
+            min-width: max-content;
+
+            max-width: none;
+
+            flex-shrink: 0;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            line-height: 1;
+
+            color: #ffffff;
+        }
 
 
         .nav-links {
@@ -109,6 +128,8 @@
             align-items: center;
 
             gap: 28px;
+
+            flex-shrink: 0;
         }
 
 
@@ -129,7 +150,7 @@
 
 
         /* =====================================================
-           CONTAINER
+           MAIN CONTAINER
         ===================================================== */
 
         .container {
@@ -138,7 +159,9 @@
 
             max-width: 1200px;
 
-            margin: 0 auto;
+            margin-left: auto;
+
+            margin-right: auto;
         }
 
 
@@ -161,7 +184,7 @@
             background:
 
                 linear-gradient(
-                    rgba(11, 15, 20, 0.72),
+                    rgba(11, 15, 20, 0.70),
                     rgba(11, 15, 20, 0.95)
                 ),
 
@@ -175,11 +198,7 @@
 
             max-width: 900px;
 
-            padding-top: 70px;
-
-            position: relative;
-
-            z-index: 2;
+            padding-top: 80px;
         }
 
 
@@ -253,21 +272,29 @@
         }
 
 
+        /*
+           IMPORTANT:
+           Proper HTML bold formatting.
+           There are NO Markdown ** symbols.
+        */
+
         .hero-description strong {
 
             color: #ffffff;
 
-            font-weight: 600;
+            font-weight: 700;
         }
 
 
         /* =====================================================
-           GENERAL SECTIONS
+           SECTIONS
         ===================================================== */
 
         section {
 
-            padding: 105px 0;
+            padding-top: 105px;
+
+            padding-bottom: 105px;
         }
 
 
@@ -429,7 +456,7 @@
 
 
         /* =====================================================
-           ENGINEERING AREAS
+           ENGINEERING APPROACH
         ===================================================== */
 
         .engineering-grid {
@@ -496,7 +523,39 @@
 
 
         /* =====================================================
-           EXPERTISE
+           ENGINEERING STATEMENT
+        ===================================================== */
+
+        .statement {
+
+            max-width: 900px;
+
+            margin-top: 45px;
+
+            padding: 35px;
+
+            background: #151c24;
+
+            border-left: 2px solid #667584;
+
+            color: #aab4bd;
+
+            font-size: 19px;
+
+            line-height: 1.9;
+        }
+
+
+        .statement strong {
+
+            color: #ffffff;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           SKILLS
         ===================================================== */
 
         .skills {
@@ -536,38 +595,6 @@
 
 
         /* =====================================================
-           PROFESSIONAL STATEMENT
-        ===================================================== */
-
-        .statement {
-
-            max-width: 900px;
-
-            margin-top: 45px;
-
-            padding: 35px;
-
-            background: #151c24;
-
-            border-left: 2px solid #667584;
-
-            color: #aab4bd;
-
-            font-size: 19px;
-
-            line-height: 1.9;
-        }
-
-
-        .statement strong {
-
-            color: #ffffff;
-
-            font-weight: 600;
-        }
-
-
-        /* =====================================================
            CONTACT
         ===================================================== */
 
@@ -576,6 +603,7 @@
             text-align: center;
 
             background:
+
                 linear-gradient(
                     135deg,
                     #111820,
@@ -588,7 +616,9 @@
 
             max-width: 800px;
 
-            margin: 0 auto;
+            margin-left: auto;
+
+            margin-right: auto;
         }
 
 
@@ -596,7 +626,9 @@
 
             max-width: 700px;
 
-            margin: 0 auto;
+            margin-left: auto;
+
+            margin-right: auto;
 
             color: #8e9aa6;
 
@@ -688,7 +720,13 @@
 
         footer {
 
-            padding: 45px 20px;
+            padding-top: 45px;
+
+            padding-bottom: 45px;
+
+            padding-left: 20px;
+
+            padding-right: 20px;
 
             text-align: center;
 
@@ -737,27 +775,48 @@
 
             nav {
 
-                padding: 0 5%;
+                padding-left: 4%;
+
+                padding-right: 4%;
+
+                height: 65px;
             }
 
 
+            /*
+               IMPORTANT:
+               Keep ARASH AMINI on one line.
+            */
+
             .logo {
 
-                font-size: 15px;
+                display: block;
 
-                letter-spacing: 1px;
+                white-space: nowrap !important;
+
+                width: auto !important;
+
+                min-width: max-content;
+
+                max-width: none;
+
+                flex-shrink: 0;
+
+                font-size: 14px;
+
+                letter-spacing: 0.8px;
             }
 
 
             .nav-links {
 
-                gap: 12px;
+                gap: 10px;
             }
 
 
             .nav-links a {
 
-                font-size: 12px;
+                font-size: 11px;
             }
 
 
@@ -769,7 +828,9 @@
 
             section {
 
-                padding: 75px 0;
+                padding-top: 75px;
+
+                padding-bottom: 75px;
             }
 
 
@@ -819,6 +880,7 @@
 </head>
 
 
+
 <body>
 
 
@@ -831,9 +893,7 @@
     <a
         href="index.html"
         class="logo"
-    >
-        ARASH AMINI
-    </a>
+    >ARASH AMINI</a>
 
 
     <div class="nav-links">
@@ -853,7 +913,7 @@
 
 
 <!-- =====================================================
-     HERO
+     HERO / INTRODUCTION
 ===================================================== -->
 
 <header class="hero">
@@ -892,16 +952,22 @@
             </h2>
 
 
-           <p class="hero-description">
+            <!-- =================================================
+                 IMPORTANT:
+                 PROPER HTML BOLD TEXT
+                 NO ** MARKDOWN
+            ================================================== -->
 
-    I develop mechanical systems from concept to detailed
-    <strong>CAD</strong>, combining
-    <strong>mechanical design</strong> with
-    <strong>finite element analysis</strong>,
-    <strong>CFD</strong> and
-    <strong>multiphysics simulation</strong>.
+            <p class="hero-description">
 
-</p>
+                I develop mechanical systems from concept
+                to detailed <strong>CAD</strong>, combining
+                <strong>mechanical design</strong> with
+                <strong>finite element analysis</strong>,
+                <strong>CFD</strong> and
+                <strong>multiphysics simulation</strong>.
+
+            </p>
 
 
         </div>
@@ -940,8 +1006,10 @@
             This project focuses on the mechanical design
             and development of a desktop 3D printer.
 
+            <br><br>
+
             The design process involved developing the
-            machine architecture, arranging the major
+            machine architecture, organising the major
             mechanical components and creating a coherent
             three-dimensional CAD assembly.
 
@@ -1052,20 +1120,25 @@
         <div class="gallery">
 
 
-            <!-- IMAGE 01 -->
+            <!-- =================================================
+                 FIRST IMAGE
+
+                 EXACT FILE NAME:
+                 01-3d-printer-cad.png.png
+            ================================================== -->
 
             <div class="image-card">
 
                 <img
                     src="01-3d-printer-cad.png.png"
-                    alt="3D printer CAD design"
+                    alt="3D printer CAD mechanical design"
                 >
 
 
                 <div class="image-caption">
 
-                    Mechanical CAD development and
-                    structural organisation of the 3D printer.
+                    Mechanical CAD development and structural
+                    organisation of the 3D printer.
 
                 </div>
 
@@ -1073,7 +1146,12 @@
 
 
 
-            <!-- IMAGE 02 -->
+            <!-- =================================================
+                 SECOND IMAGE
+
+                 EXACT FILE NAME:
+                 02-3d-printer-render.png.png
+            ================================================== -->
 
             <div class="image-card">
 
@@ -1085,8 +1163,8 @@
 
                 <div class="image-caption">
 
-                    Final visualisation of the 3D printer
-                    mechanical design.
+                    Final visualisation of the developed
+                    3D printer mechanical design.
 
                 </div>
 
@@ -1129,16 +1207,14 @@
             My engineering workflow combines mechanical
             design with numerical simulation and analysis.
             This allows a design to be evaluated not only
-            geometrically, but also from a performance and
-            engineering perspective.
+            geometrically, but also from a performance
+            and engineering perspective.
 
         </p>
 
 
         <div class="engineering-grid">
 
-
-            <!-- MECHANICAL DESIGN -->
 
             <div class="engineering-card">
 
@@ -1148,9 +1224,7 @@
 
 
                 <h3>
-
                     Mechanical Design
-
                 </h3>
 
 
@@ -1167,8 +1241,6 @@
 
 
 
-            <!-- FEA -->
-
             <div class="engineering-card">
 
                 <div class="engineering-number">
@@ -1177,9 +1249,7 @@
 
 
                 <h3>
-
                     Finite Element Analysis
-
                 </h3>
 
 
@@ -1187,15 +1257,14 @@
 
                     Finite element analysis for evaluating
                     structural behaviour, stresses,
-                    deformation and mechanical performance.
+                    deformation and mechanical performance
+                    using engineering simulation methods.
 
                 </p>
 
             </div>
 
 
-
-            <!-- CFD -->
 
             <div class="engineering-card">
 
@@ -1205,9 +1274,7 @@
 
 
                 <h3>
-
                     CFD Simulation
-
                 </h3>
 
 
@@ -1224,8 +1291,6 @@
 
 
 
-            <!-- COMSOL -->
-
             <div class="engineering-card">
 
                 <div class="engineering-number">
@@ -1234,9 +1299,7 @@
 
 
                 <h3>
-
                     Multiphysics Simulation
-
                 </h3>
 
 
@@ -1261,7 +1324,7 @@
 
 
 <!-- =====================================================
-     PROFESSIONAL STATEMENT
+     ENGINEERING PHILOSOPHY
 ===================================================== -->
 
 <section class="dark-section">
@@ -1286,7 +1349,7 @@
         <div class="statement">
 
             I approach engineering design as more than
-            creating a 3D model.
+            simply creating a 3D model.
 
             <br><br>
 
@@ -1296,14 +1359,14 @@
             <strong>finite element analysis</strong>,
             <strong>CFD</strong> and
             <strong>multiphysics simulation</strong>
-            to understand how a system will perform before
+            to understand how a system can perform before
             physical prototyping.
 
             <br><br>
 
-            This allows mechanical concepts to be developed
-            with both geometry and engineering performance
-            in mind.
+            This approach allows mechanical concepts to be
+            developed with both geometry and engineering
+            performance in mind.
 
         </div>
 
